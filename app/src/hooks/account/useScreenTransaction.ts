@@ -9,7 +9,7 @@ import useWallet from './useWallet'
 
 const fetcher = async (address: string, transactionType: TransactionType): Promise<ScreenTransactionData | null> => {
   const res = await fetch(
-    `${process.env.REACT_APP_API_URL}/screen/transaction?address=${address}&transactionType=${transactionType}`,
+    `/screen/transaction?address=${address}&transactionType=${transactionType}`,
     {
       method: 'GET',
       mode: 'cors',

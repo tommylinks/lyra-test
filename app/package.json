@@ -25,6 +25,7 @@
     "@socket.tech/plugin": "^1.0.14",
     "@spindl-xyz/attribution-lite": "^0.0.7",
     "copy-to-clipboard": "^3.3.1",
+    "http-proxy-middleware": "^2.0.6",
     "nullthrows": "^1.1.1",
     "posthog-js": "^1.57.2",
     "react": "18.2.0",
@@ -39,7 +40,7 @@
   "peerDependencies": {
     "ethers": "^5.6.1"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "https://api.lyra.finance",
   "devDependencies": {
     "@craco/craco": "^7.0.0",
     "@typechain/ethers-v5": "^10.2.0",
