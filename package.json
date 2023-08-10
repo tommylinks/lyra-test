@@ -1,0 +1,37 @@
+{
+  "name": "@lyrafinance/interface",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace @lyra/app start",
+    "build": "yarn workspace @lyra/app build",
+    "analyze": "yarn workspace @lyra/app analyze",
+    "sdk:watch": "yarn workspace @lyrafinance/lyra-js watch",
+    "sdk:build": "yarn workspace @lyrafinance/lyra-js build",
+    "format": "yarn workspaces run format",
+    "tsc": "yarn workspaces run tsc",
+    "lint": "yarn workspaces run lint",
+    "clean": "yarn workspaces run clean && rimraf node_modules",
+    "postinstall": "husky install"
+  },
+  "workspaces": [
+    "app",
+    "ui",
+    "sdk"
+  ],
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.0",
+    "rimraf": "^3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "resolutions": {
+    "d3-color": "^3.1.0",
+    "nth-check": "^2.0.1"
+  }
+}
