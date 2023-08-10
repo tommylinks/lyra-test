@@ -67,12 +67,12 @@ function App(): JSX.Element {
 
     // Remove /:pathname# prefix from url path
     const basePathSearch = (location.pathname + location.search).substring(1)
-    if (!basePathSearch.startsWith('#') && pathname === '/') {
+    if (!basePathSearch.startsWith('app/#') && pathname === '/') {
       navigate(basePathSearch, { replace: true })
     }
     const timeout = setTimeout(() => {
-      if (!basePathSearch.startsWith('#')) {
-        window.history.replaceState({}, '', '/#' + pathname + search)
+      if (!basePathSearch.startsWith('app/#')) {
+        window.history.replaceState({}, '', '/app/#' + pathname + search)
       }
     }, 200)
 
