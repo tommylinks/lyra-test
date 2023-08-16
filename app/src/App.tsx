@@ -66,16 +66,16 @@ function App(): JSX.Element {
     window.scrollTo(0, 0)
 
     // Remove /:pathname# prefix from url path
-    const basePathSearch = (location.pathname + location.search).substring(1)
-    if (!basePathSearch.startsWith('options/#') && pathname === '/') {
-      navigate(basePathSearch, { replace: true })
-    }
-    const timeout = setTimeout(() => {
-      if (!basePathSearch.startsWith('options/#')) {
-        window.history.replaceState({}, '', '/options/#' + pathname + search)
-      }
-    }, 200)
-    return () => clearTimeout(timeout)
+    // const basePathSearch = (location.pathname + location.search).substring(1)
+    // if (!basePathSearch.startsWith('options/#') && pathname === '/') {
+    //   navigate(basePathSearch, { replace: true })
+    // }
+    // const timeout = setTimeout(() => {
+    //   if (!basePathSearch.startsWith('options/#')) {
+    //     window.history.replaceState({}, '', '/options/#' + pathname + search)
+    //   }
+    // }, 200)
+    // return () => clearTimeout(timeout)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
 
