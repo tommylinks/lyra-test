@@ -13,6 +13,7 @@
     "tsc": "tsc",
     "clean": "rimraf node_modules build"
   },
+  "homepage": "/options",
   "dependencies": {
     "@apollo/client": "^3.7.10",
     "@gnosis.pm/safe-apps-wagmi": "^1.0.3",

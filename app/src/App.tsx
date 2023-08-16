@@ -67,15 +67,14 @@ function App(): JSX.Element {
 
     // Remove /:pathname# prefix from url path
     const basePathSearch = (location.pathname + location.search).substring(1)
-    if (!basePathSearch.startsWith('#') && pathname === '/') {
+    if (!basePathSearch.startsWith('options/#') && pathname === '/') {
       navigate(basePathSearch, { replace: true })
     }
     const timeout = setTimeout(() => {
-      if (!basePathSearch.startsWith('#')) {
-        window.history.replaceState({}, '', '/#' + pathname + search)
+      if (!basePathSearch.startsWith('options/#')) {
+        window.history.replaceState({}, '', '/options/#' + pathname + search)
       }
     }, 200)
-
     return () => clearTimeout(timeout)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])

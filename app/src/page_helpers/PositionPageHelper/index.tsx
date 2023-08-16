@@ -25,7 +25,8 @@ const PositionPageHelper = ({ position, option }: Props): JSX.Element => {
   const expiryTimestamp = position.expiryTimestamp
   const isCall = position.isCall
   // const baseName = `${formatTokenName(position.market().baseToken)}`
-  const baseName = `${formatTokenName(position.market().baseToken)}`
+  const baseName = `options/${formatTokenName(position.market().baseToken)}`
+
   return (
     <Page
       showBackButton
