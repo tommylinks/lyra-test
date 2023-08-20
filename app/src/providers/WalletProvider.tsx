@@ -48,7 +48,7 @@ const connectors = connectorsForWallets([
     groupName: 'Best Support for Optimism',
     wallets: [
       metaMaskWallet({ chains }),
-      coinbaseWallet({ chains, appName: 'Lyra' }),
+      coinbaseWallet({ chains, appName: 'Perpy' }),
       walletConnectWallet({ chains }),
       rainbowWallet({ chains }),
       imTokenWallet({ chains }),
@@ -191,8 +191,8 @@ export function WalletProvider({ children }: { children: React.ReactNode }): JSX
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
         appInfo={{
-          appName: 'Lyra',
-          learnMoreUrl: 'https://lyra.finance',
+          appName: 'Perpy',
+          // learnMoreUrl: 'https://perpy.finance',
         }}
         avatar={Avatar}
         theme={theme}
