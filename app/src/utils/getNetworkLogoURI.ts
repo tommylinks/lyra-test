@@ -6,10 +6,10 @@ import resolveNetwork from './resolveNetwork'
 export default function getNetworkLogoURI(network: Network): string {
   switch (resolveNetwork(network)) {
     case AppNetwork.Arbitrum:
-      return getAssetSrc('/images/arbitrum.svg')
+      return getAssetSrc('/options/images/arbitrum.svg')
     case AppNetwork.Optimism:
-      return getAssetSrc('/images/op-logo.svg')
+      return getAssetSrc('/options/images/op-logo.svg')
     case AppNetwork.Ethereum:
-      return getAssetSrc('/images/ethereum-logo.png')
+      return getAssetSrc('/options/images/ethereum-logo.png')
   }
 }

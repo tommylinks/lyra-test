@@ -54,7 +54,7 @@ export default function LayoutDesktopNav(): JSX.Element {
         <Flex width="100%" px={6}>
           <Flex alignItems="center" width={SIDE_WIDTH}>
             <BaseLink display="flex" alignItems="center" href={getPagePath({ page: PageId.TradeIndex })}>
-              <Image src={getAssetSrc('/images/logo.png')} height={32} width={32} />
+              <Image src={getAssetSrc('/options/images/perpy-logo.svg')} height={32} width={32} />
             </BaseLink>
           </Flex>
           <Flex flexGrow={1} alignItems={'center'} justifyContent={'center'}>

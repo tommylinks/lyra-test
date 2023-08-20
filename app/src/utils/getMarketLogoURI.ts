@@ -7,19 +7,19 @@ export default function getMarketLogoURI(market: Market): string {
     case 'seth':
     case 'eth':
     case 'weth':
-      return getAssetSrc('/images/ethereum-logo.png')
+      return getAssetSrc('/options/images/ethereum-logo.png')
     case 'btc':
     case 'sbtc':
     case 'wbtc':
-      return getAssetSrc('/images/bitcoin-logo.png')
+      return getAssetSrc('/options/images/bitcoin-logo.png')
     case 'sol':
     case 'ssol':
-      return getAssetSrc('/images/solana-logo.png')
+      return getAssetSrc('/options/images/solana-logo.png')
     case 'op':
-      return getAssetSrc('/images/op-logo.svg')
+      return getAssetSrc('/options/images/op-logo.svg')
     case 'lyarb':
     case 'arb':
-      return getAssetSrc('/images/arbitrum-logo.svg')
+      return getAssetSrc('/options/images/arbitrum-logo.svg')
     default:
       return ''
   }

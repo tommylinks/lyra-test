@@ -29,7 +29,7 @@ export default function PageMobile({
       <Image
         mb={12}
         href={getPagePath({ page: PageId.TradeIndex })}
-        src={getAssetSrc('/images/logo.png')}
+        src={getAssetSrc('/options/images/perpy-logo.svg')}
         height={36}
         width={36}
       />

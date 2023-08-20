@@ -18,9 +18,9 @@ const lightColors = {
   disabledButtonBg: '#E8E8E899',
 
   // primary button
-  primaryButtonBg: '#56C3A9E6', // 90%
-  primaryButtonHover: '#56C3A9', // 100%
-  primaryButtonActive: '#52b9a1',
+  primaryButtonBg: '#8525DB', // 90%
+  primaryButtonHover: '#6419B7', // 100%
+  primaryButtonActive: '#6419B7',
 
   // warning button
   warningButtonBg: '#F7931A',
@@ -48,9 +48,9 @@ const lightColors = {
   warningTokenBg: '#F7931A33',
 
   // charts
-  primaryLine: '#3CAA8F',
+  primaryLine: '#bbec46',
   primaryArea: '#57B29C33',
-  errorLine: '#FC4D95',
+  errorLine: '#ff7371',
   errorArea: '#FC4D9533',
   axis: '#C4CED7',
   crosshair: '#6B7D94',
@@ -72,7 +72,7 @@ const lightColors = {
   text: '#052822',
   secondaryText: '#6B7D94',
   disabledText: '#95A4B5',
-  primaryText: '#3CAA8F',
+  primaryText: '#8525db',
   errorText: '#FC4D95',
   warningText: '#de8417',
 
@@ -105,23 +105,23 @@ const lightColors = {
 
 const darkColors = {
   // backgrounds
-  background: '#1A212B',
+  background: '#230345',
   hover: '#3A445033', // 20%
   active: '#3A445066', // 40%
-  cardBg: '#25303BBF', // 75%
+  cardBg: '#2f095a', // 75%
   cardElevatedBg: '#1B252D',
-  cardHoverBg: '#2D3741',
+  cardHoverBg: '#230345',
   cardOutline: '#3A4047',
 
   // primary button
-  primaryButtonBg: '#57B29C',
-  primaryButtonHover: '#5BBCA5',
-  primaryButtonActive: '#6bc3ae',
+  primaryButtonBg: '#8525DB',
+  primaryButtonHover: '#6419B7',
+  primaryButtonActive: '#6419B7',
 
   // error button
-  errorButtonBg: '#FC4D95',
-  errorButtonHover: '#e34586',
-  errorButtonActive: '#c73c75',
+  errorButtonBg: '#38BCF4',
+  errorButtonHover: '#27b7f3',
+  errorButtonActive: '#27b7f3',
 
   // warning button
   warningButtonBg: '#F7931A',
@@ -129,9 +129,9 @@ const darkColors = {
   warningButtonActive: '#c27414',
 
   // default button
-  buttonBg: '#3A445099', // 60%
-  buttonHover: '#3A424BCC', // 80%
-  buttonActive: '#3A424B', // 100%
+  buttonBg: '#361172', // 60%
+  buttonHover: '#43158e', // 80%
+  buttonActive: '#43158e', // 100%
   disabledButtonBg: '#3A445099',
 
   // dark button
@@ -150,9 +150,9 @@ const darkColors = {
   errorTokenBg: '#FC4D9526',
 
   // charts
-  primaryLine: '#69D8BD',
+  primaryLine: '#bbec46',
   primaryArea: '#57B29C26',
-  errorLine: '#FC4D95',
+  errorLine: '#ff7371',
   errorArea: '#FC4D9526',
   axis: '#95A4B580',
   crosshair: '#95A4B5',
@@ -160,7 +160,7 @@ const darkColors = {
   // spinner
   lightSpinner: '#3A445099',
   lightSpinnerBg: '#3A445033',
-  primarySpinner: '#69D8BD',
+  primarySpinner: '#8525DB',
   primarySpinnerBg: '#69D8BD33',
   errorSpinner: '#FC4D95',
   errorSpinnerBg: '#FC4D9533',
@@ -174,7 +174,7 @@ const darkColors = {
   text: '#FFFFFF',
   secondaryText: '#95A4B5',
   disabledText: '#6B7D94',
-  primaryText: '#69D8BD',
+  primaryText: '#8525db',
   errorText: '#FC4D95',
   warningText: '#de8417',
 

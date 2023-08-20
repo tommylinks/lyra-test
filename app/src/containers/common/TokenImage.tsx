@@ -19,7 +19,7 @@ export default function TokenImage({ nameOrAddress, size = 32, ...styleProps }: 
   const trueSize = parseInt(String(useThemeValue(size)))
   const logoURI = useMemo(() => {
     if (nameOrAddress.toLowerCase() === 'eth') {
-      return '/images/ethereum-logo.png'
+      return '/options/images/ethereum-logo.png'
     }
     return getTokenInfo(nameOrAddress)?.logoURI ?? ''
   }, [nameOrAddress])

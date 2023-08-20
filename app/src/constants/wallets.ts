@@ -9,7 +9,7 @@ type WalletOptions = {
 export const qredo = ({ chains }: WalletOptions): Wallet => ({
   id: 'qredo',
   name: 'Qredo',
-  iconUrl: getAssetSrc('/images/qredo.webp'),
+  iconUrl: getAssetSrc('/options/images/qredo.webp'),
   downloadUrls: {
     qrCode: 'https://qredo.network/register',
   },
@@ -41,7 +41,7 @@ export const qredo = ({ chains }: WalletOptions): Wallet => ({
 export const rabby = ({ chains }: WalletOptions): Wallet => ({
   id: 'rabby',
   name: 'Rabby Wallet',
-  iconUrl: getAssetSrc('/images/rabby.jpeg'),
+  iconUrl: getAssetSrc('/options/images/rabby.jpeg'),
   downloadUrls: {
     qrCode: 'https://chrome.google.com/webstore/detail/rabby/acmacodkjbdgmoleebolmdjonilkdbch?hl=en',
     browserExtension: 'https://chrome.google.com/webstore/detail/rabby/acmacodkjbdgmoleebolmdjonilkdbch?hl=en',
