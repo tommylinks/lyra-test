@@ -13,6 +13,7 @@ export type TextVariant =
   | 'bodyMedium'
   | 'small'
   | 'xs'
+  | 'logo'
 
 export type TextColor =
   | 'white'

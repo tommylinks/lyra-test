@@ -210,6 +210,7 @@ const theme = {
     body: "'Inter var', sans-serif",
     heading: "'Sohne', sans-serif",
     monospace: 'Menlo, monospace',
+    perpy: '"Tilt Warp",cursive',
   },
   fontWeights: {
     light: 300,
@@ -278,6 +279,13 @@ const theme = {
       fontFamily: 'body',
       fontWeight: 'body',
       fontSize: '14px',
+      lineHeight: '22px',
+      letterSpacing: '0px',
+    },
+    logo: {
+      fontFamily: 'perpy',
+      fontWeight: 'medium',
+      fontSize: '20px',
       lineHeight: '22px',
       letterSpacing: '0px',
     },
