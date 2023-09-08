@@ -1,7 +1,7 @@
 import Alert from '@lyra/ui/components/Alert'
 import Box from '@lyra/ui/components/Box'
 import Button from '@lyra/ui/components/Button'
-import { IconType } from '@lyra/ui/components/Icon'
+// import { IconType } from '@lyra/ui/components/Icon'
 import Link from '@lyra/ui/components/Link'
 import ButtonShimmer from '@lyra/ui/components/Shimmer/ButtonShimmer'
 import { LayoutProps, MarginProps } from '@lyra/ui/types'
@@ -17,16 +17,16 @@ import useEthBalance from '@/app/hooks/account/useEthBalance'
 import useIsReady from '@/app/hooks/account/useIsReady'
 import useIsSmartContractWallet from '@/app/hooks/account/useIsSmartContractWallet'
 import useScreenTransaction from '@/app/hooks/account/useScreenTransaction'
-import useTransaction from '@/app/hooks/account/useTransaction'
+// import useTransaction from '@/app/hooks/account/useTransaction'
 import useWallet from '@/app/hooks/account/useWallet'
 import withSuspense from '@/app/hooks/data/withSuspense'
 import useLocalStorage from '@/app/hooks/local_storage/useLocalStorage'
-import useMutateDrip from '@/app/hooks/mutations/useMutateDrip'
+// import useMutateDrip from '@/app/hooks/mutations/useMutateDrip'
 import coerce from '@/app/utils/coerce'
 import { getChainIdForNetwork } from '@/app/utils/getChainIdForNetwork'
-import getLyraSDK from '@/app/utils/getLyraSDK'
-import getNetworkConfig from '@/app/utils/getNetworkConfig'
-import isMainnet from '@/app/utils/isMainnet'
+// import getLyraSDK from '@/app/utils/getLyraSDK'
+// import getNetworkConfig from '@/app/utils/getNetworkConfig'
+// import isMainnet from '@/app/utils/isMainnet'
 import isScreeningEnabled from '@/app/utils/isScreeningEnabled'
 import isTermsOfUseEnabled from '@/app/utils/isTermsOfUseEnabled'
 
@@ -108,19 +108,19 @@ const TransactionButton = withSuspense(
         setIsLoading(false)
       }, [onClick])
 
-      const execute = useTransaction(network)
-      const mutateDrip = useMutateDrip()
-      const handleDrip = useCallback(async () => {
-        if (!account) {
-          console.warn('Wallet not connected')
-          return
-        }
-        if (!lyraNetwork) {
-          console.warn('Network not supported for drip')
-          return
-        }
-        await execute(getLyraSDK(lyraNetwork).drip(account), TransactionType.Faucet, { onComplete: () => mutateDrip() })
-      }, [account, lyraNetwork, execute, mutateDrip])
+      // const execute = useTransaction(network)
+      // const mutateDrip = useMutateDrip()
+      // const handleDrip = useCallback(async () => {
+      //   if (!account) {
+      //     console.warn('Wallet not connected')
+      //     return
+      //   }
+      //   if (!lyraNetwork) {
+      //     console.warn('Network not supported for drip')
+      //     return
+      //   }
+      //   await execute(getLyraSDK(lyraNetwork).drip(account), TransactionType.Faucet, { onComplete: () => mutateDrip() })
+      // }, [account, lyraNetwork, execute, mutateDrip])
 
       const onCloseSwap = useCallback(() => setIsSwapOpen(false), [])
 
@@ -151,65 +151,67 @@ const TransactionButton = withSuspense(
           {!isReady ? (
             // Switch networks prompt
             <ConnectWalletButton mb={3} width="100%" size="lg" network={network} />
-          ) : requireEthBalance ? (
-            isMainnet() ? (
-              // Bridge ETH
-              <Button
-                label="Bridge ETH"
-                width="100%"
-                onClick={async () => {
-                  if (isTermsAccepted || !isTermsOfUseEnabled()) {
-                    setIsSwapOpen(true)
-                  } else {
-                    setIsTermsOpen(true)
-                  }
-                }}
-                variant="primary"
-                size="lg"
-                mb={3}
-              />
-            ) : (
-              // Drip ETH
-              <Button
-                label="Get Test ETH"
-                width="100%"
-                size="lg"
-                rightIcon={IconType.ArrowUpRight}
-                variant="primary"
-                href={getNetworkConfig(network).faucetUrl ?? '#'}
-                target="_blank"
-                mb={3}
-              />
-            )
-          ) : requireBalance && requireSwap && lyraNetwork ? (
-            isMainnet() ? (
-              // Swap to target token
-              <Button
-                label={`Swap to ${requireBalance.symbol}`}
-                width="100%"
-                onClick={async () => {
-                  if (isTermsAccepted || !isTermsOfUseEnabled()) {
-                    setIsSwapOpen(true)
-                  } else {
-                    setIsTermsOpen(true)
-                  }
-                }}
-                variant="primary"
-                size="lg"
-                mb={3}
-              />
-            ) : (
-              // Drip tokens
-              <Button
-                label={`Get Test ${requireBalance.symbol}`}
-                onClick={handleDrip}
-                width="100%"
-                variant="primary"
-                size="lg"
-                mb={3}
-              />
-            )
-          ) : requireAllowance ? (
+          ) : //   : requireEthBalance ? (
+          //   isMainnet() ? (
+          //     // Bridge ETH
+          //     <Button
+          //       label="Bridge ETH"
+          //       width="100%"
+          //       onClick={async () => {
+          //         if (isTermsAccepted || !isTermsOfUseEnabled()) {
+          //           setIsSwapOpen(true)
+          //         } else {
+          //           setIsTermsOpen(true)
+          //         }
+          //       }}
+          //       variant="primary"
+          //       size="lg"
+          //       mb={3}
+          //     />
+          //   ) : (
+          //     // Drip ETH
+          //     <Button
+          //       label="Get Test ETH"
+          //       width="100%"
+          //       size="lg"
+          //       rightIcon={IconType.ArrowUpRight}
+          //       variant="primary"
+          //       href={getNetworkConfig(network).faucetUrl ?? '#'}
+          //       target="_blank"
+          //       mb={3}
+          //     />
+          //   )
+          // ) : requireBalance && requireSwap && lyraNetwork ? (
+          //   isMainnet() ? (
+          //     // Swap to target token
+          //     <Button
+          //       label={`Swap to ${requireBalance.symbol}`}
+          //       width="100%"
+          //       onClick={async () => {
+          //         if (isTermsAccepted || !isTermsOfUseEnabled()) {
+          //           setIsSwapOpen(true)
+          //         } else {
+          //           setIsTermsOpen(true)
+          //         }
+          //       }}
+          //       variant="primary"
+          //       size="lg"
+          //       mb={3}
+          //     />
+          //   ) : (
+          //     // Drip tokens
+          //     <Button
+          //       label={`Get Test ${requireBalance.symbol}`}
+          //       onClick={handleDrip}
+          //       width="100%"
+          //       variant="primary"
+          //       size="lg"
+          //       mb={3}
+          //     />
+          //   )
+          // )
+
+          requireAllowance ? (
             // Approve prompt
             <Button
               label={`Allow Lyra to use your ${requireAllowance.symbol}`}
